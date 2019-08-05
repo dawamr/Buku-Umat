@@ -1,38 +1,13 @@
 const { Router } = require('express');
+const usersController = require('./../controllers/usersController.js')
+
 const router = new Router();
 
 
-router.get('/', (req,res)=>{
-    res.json('welcome to express');
-});
-
-router.get('/api', (req, res)=> {
-res.json('welcome to APi');
-});
-router.get('/api/users', (req,res)=>{
-    res.json([
-        { 
-            "id":"1",
-            "nama":"abcc",
-        },
-        { 
-            "id":"2",
-            "nama":"dabcc",
-        }
-    ]);
-
-});
-router.post('/api/users', (req,res)=> {
-console.log('ini post');
-
-});
-router.put('/api/users', (req,res)=> {
-console.log('ini update');
-    
-});
-router.delete('/api/users', (req,res)=> {
-console.log('ini delete');
-    
-});
+router.get('/', usersController.index);
+router.get('/users', usersController.getUsers);
+router.post('/users', usersController.createUsers);
+router.put('/users/:id', usersController.updateUsers);
+router.delete('/users/:id',usersController.deleteUsers)
 
 module.exports = router;
