@@ -1,8 +1,11 @@
+const { users } = require('../models/usersModel.js');
+
 function index(req,res){
     res.json('welcome to express');
 }
 function getUsers(req,res){
-
+    const dataUsers = getAll();
+    res.json(dataUsers);
 }
 function createUsers(req,res){
     
