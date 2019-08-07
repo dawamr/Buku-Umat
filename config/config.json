@@ -3,7 +3,7 @@
     "username": "dawamr",
     "password": "dawamraja",
     "database": "db_nodex",
-    "host": "127.0.0.1",
+    "host": "localhost",
     "dialect": "postgres",
     "operatorsAliases": false
   },
@@ -11,7 +11,7 @@
     "username": "dawamr",
     "password": "dawamraja",
     "database": "db_nodex",
-    "host": "127.0.0.1",
+    "host": "localhost",
     "dialect": "postgres",
     "operatorsAliases": false
   },
@@ -19,7 +19,7 @@
     "username": "dawamr",
     "password": "dawamraja",
     "database": "db_nodex",
-    "host": "127.0.0.1",
+    "host": "localhost",
     "dialect": "postgres",
     "operatorsAliases": false
   }

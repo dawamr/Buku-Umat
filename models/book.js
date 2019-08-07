@@ -9,12 +9,8 @@ module.exports = (sequelize, DataTypes) => {
     },
     title: DataTypes.STRING,
     description: DataTypes.STRING,
-    publised: DataTypes.DATE,
-    author: [{
-      first_name:  DataTypes.STRING,
-      last_name:  DataTypes.STRING,
-    }]
-    
+    publised: DataTypes.INTEGER,
+    author: DataTypes.STRING,
    
   }, {});
   Book.associate = function(models) {

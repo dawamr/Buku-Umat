@@ -15,7 +15,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       publised: {
-        type: Sequelize.DATE
+        type: Sequelize.INTEGER
       },
       author: {
         type: Sequelize.STRING
