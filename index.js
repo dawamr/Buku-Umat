@@ -1,42 +1,14 @@
-/*jshint esversion: 6 */
-
 const express = require('express');
+var path = require('path');
+var Sequelize = require('sequelize');
+const router = require('./routes/router.js');
 
-const RouteApplication = express();
-RouteApplication.get('/', (req,res)=>{
-    res.json('welcome to express');
-});
+// import models, { sequelize } from './models';
 
-RouteApplication.get('/api', (req, res)=> {
-res.json('welcome to APi');
-});
-RouteApplication.get('/api/users', (req,res)=>{
-    res.json([
-        { 
-            "id":"1",
-            "nama":"abcc",
-        },
-        { 
-            "id":"2",
-            "nama":"dabcc",
-        }
-    ]);
+const app = express();
 
-});
-RouteApplication.post('/api/users', (req,res)=> {
-console.log('ini post');
+app.use(router);
 
-});
-RouteApplication.put('/api/users', (req,res)=> {
-console.log('ini update');
-    
-});
-RouteApplication.delete('/api/users', (req,res)=> {
-console.log('ini delete');
-    
-});
-RouteApplication.listen(5000, ()=>
-{
-console.log('Berjalan di port 5000');
 
-});
+
+module.exports = app;
